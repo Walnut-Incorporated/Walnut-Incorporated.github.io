@@ -25,13 +25,13 @@
 </head>
 <body>
 
-<h2>Test</h2>
+<h2>Overlay Test</h2>
 
 <button onclick="on()">Open Overlay</button>
 
 <div id="overlay" class="overlay">
   <div class="overlay-content">
-    <h2>Walnuts are tasty</h2>
+    <h2>Hello World!</h2>
     <span onclick="off()" style="cursor: pointer;">Close</span>
   </div>
 </div>
@@ -40,3 +40,11 @@
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
