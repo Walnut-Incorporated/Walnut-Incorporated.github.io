@@ -1,1 +1,42 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  display: none;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Test</h2>
+
+<button onclick="on()">Open Overlay</button>
+
+<div id="overlay" class="overlay">
+  <div class="overlay-content">
+    <h2>Walnuts are tasty</h2>
+    <span onclick="off()" style="cursor: pointer;">Close</span>
+  </div>
+</div>
+
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
